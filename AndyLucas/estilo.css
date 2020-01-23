@@ -1,0 +1,29 @@
+h3,h1{
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p{
+    color: rgb(110, 15, 199);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: justify;
+    
+
+}
+pre{
+    color: rgb(17, 17, 19);
+    font-family: 'Times New Roman', Times, serif;
+  
+   
+}
+
+body{
+    background-color: lavender;
+}
+
+h6{
+    color: rgb(216, 12, 131);
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

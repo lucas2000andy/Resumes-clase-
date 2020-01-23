@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Resumenes</title>
+</head>
+
+<body>
+    <div id="header">
+        <center>
+            <h1>Resumenes de Conceptos de programación Orientada a Objetos</h1>
+        </center>
+
+    </div>
+    <div id="cuerpo">
+
+        <h3>Asociación</h3>
+        <p>
+
+La asociación es una relación entre dos o más objetos donde cada objeto es independiente
+el uno del otro ya que esto significa que un objeto puede existir sin el otro y ningún objeto posee el
+otro.
+        </p>
+
+        <p>Aqui un ejemplo de como se utiliza la Asociación</p>
+        <pre>
+            function Persona(nombre, apellido) {
+
+                this.nombre = nombre;
+            
+                this.apellido = apellido;
+            
+                this.parent = null;
+                }
+                var andyCruz = new Persona("Andy", "Cruz");
+            
+                var JhorCruz = new Person("Jhor", "Cruz");
+            
+                
+                JhorCruz.parent = andyCruz;
+
+          <p>
+            La asignación del objeto andyCruz a la propiedad padre del objeto jhorCruz
+            establece una asociación entre los dos objetos. Por supuesto, el objeto andyCruz vive
+            independientemente del objeto jhorCruz y viceversa. Ambos pueden ser creados y eliminados
+            independientemente el uno al otro.</p>      
+                
+        </pre>
+        <h3>Agregación</h3>
+        <p>
+        
+Es una forma especial de relación de asociación donde un objeto tiene un papel principal
+que el otro Por lo general, 
+<br>
+este rol principal determina un tipo de propiedad de un objeto en 
+relación con el otro. 
+<br>
+El objeto propietario a menudo se denomina agregado y el objeto propietario es
+componente llamado Sin embargo, cada objeto tiene una vida independiente.
+        </p>
+        <p>Aqui un ejemplo de como se utiliza la Agregación</p>
+        <pre>
+            var empresa = {
+        
+                nombre: "ACME Inc.",
+        
+                empleados: []
+               };
+               var andyCruz = new Person("Andy", "Cruz");
+        
+               var JhorCruz = new Person("Jhor", "Cruz");
+        
+               empresa.empleados.push(andyCruz);
+        
+               empresa.empleados.push(JhorCruz);
+
+               
+        </pre>
+        <h3>Composicion</h3>
+        <p>
+            Es muy importante conocer composición es un tipo fuerte de agregación, donde cada objeto componente no tiene
+            vida independiente sin su dueño, el agregado.
+        </p>
+        <p>Aqui un ejemplo de como se utiliza la Composicion</p>
+        <pre>
+            var persona = {nombre: "Andy",
+
+            apellido: "Yanez",
+           
+            habla: {
+           
+            calle: "123 Duncannon Street",
+           
+            ciudad: "Quito",
+           
+            país: " Ecuador"
+           
+            }};
+        </pre>
+
+        <h3>Encapsulacion</h3>
+        <p>
+            Es importante conocer que los objetos son centrales para el modelo de Programación Orientada a Objetos, y representan el
+            expresión típica de encapsulación, es decir, la capacidad de concentrar en una entidad ambos datos
+            (propiedades) y funciones (métodos),  ocultando los detalles internos.
+<br>
+            En otras palabras, el principio de encapsulación permite que un objeto exponga exactamente lo que se necesita para
+            utilízalo, ocultando la complejidad de su implementación. 
+            
+           
+        </p>
+        <p>A qui un ejemplo que demostrara el funcinamiento encapsulación</p>
+        <pre>
+          var empresa = {
+    nombre: "SmarWork.",
+    empleados: [],
+    sortEmployeesByName: function() {...}
+    
+   };
+
+   //Aqui usamos el objeto company que ha sido encapsulado en las siguientes dos lineaz.
+
+empresa.empleados = "esto es algo bueno mundo!!!!! :) !";
+
+empresa.sortEmployeesByName();
+               
+        </pre>
+        <h3>Herencia</h3>
+        <p>En  si la herencia permite que nuevos objetos adquieran las propiedades de los objetos existentes. Esta
+            La relación entre dos objetos es muy común y se puede encontrar en muchas situaciones en
+            vida real.
+            <br><br>
+             en Resumen 
+             <br><br>
+            La Herencia  permite que nuevos objetos obtengan propiedades y metodos ya existentes en otros objetos, usualmente se crean objetos especializados a partir de objetos con caracteristicas mas generales.
+        </p>
+        <p>A qui un ejemplo demostrara el funcinamiento de herencia</p>
+        <pre>
+            function Persona() {
+                this.nombre = "";
+                this.apellido = "";
+            }
+            function Desarollador() {
+                this.knownLanguage = "";
+            }
+            
+            //Aqui se da la herencia al objeto desarollador que es una persona de la misma forma.
+            <br>
+            desarrollador.prototipo = new Persona();
+               
+               var desarollador = new desarollador();
+        </pre>
+        <h3>Polimorfismo</h3>
+        <p>
+            Es muy importante conocer que en programación orientada a objetos, el polimorfismo se entiende de diferentes maneras, incluso si
+la base es una noción común: 
+<br><br>
+<h6>
+la capacidad de manejar múltiples tipos de datos de manera uniforme.
+<br><br>
+El soporte del polimorfismo trae beneficios en la programación que van hacia la meta general
+de OOP. Principalmente, reduce el acoplamiento en nuestra aplicación y, en algunos casos, permite crear
+Código más compacto.
+<br><br>
+</h6>
+Las formas más comunes de soportar el polimorfismo con un lenguaje de programación incluyen:
+<h6>
+
+ Métodos que toman parámetros con diferentes tipos de datos (sobrecarga)
+<br><br>
+Manejo de tipos genéricos, no conocidos de antemano (polimorfismo paramétrico)
+<br><br>
+Expresiones cuyo tipo puede ser representado por una clase y clases derivadas de ella.
+(subtipo de polimorfismo o polimorfismo de inclusión)
+</h6>
+            
+            conclusion:El polimorfismo es realizar una misma accion, que puede variar en cada objeto.
+        </p>
+        <p>A qui un ejemplo demostrara el funcinamiento de polimorfismo</p>
+        <pre>
+
+            public int Sum(int x, int y) {
+                return Sum(x, y, 0);
+               }
+
+               public int Sum(int x, int y, int z) {
+                return x+ y + z;
+
+               }
+
+
+        la Explicacion de este ejemplo es de que  ambas funciones tienen un mismo nombre, pero 
+        su funcion es distinta.
+        </pre>
+
+   
+        <h3>Encapsulación y ocultación de información.</h3>
+        <p>     
+La encapsulación es uno de los principios básicos del paradigma de programacion orientada a objetos.
+            
+Nos permite agruparlo en un objeto, tanto datos como funcionalidades que operan en esos datos.
+Trabajar con encapsulación y ocultar información.
+
+Usando los métodos expuestos por el objeto para manipular los datos, aprovechamos el
+principio de encapsulación ignorando su complejidad interna y detalles de implementación. En
+en otras palabras, la encapsulación oculta los detalles internos sobre cómo manipula el objeto
+sus datos Esta característica.
+        </p>
+
+
+        <h3>Privacidad Pública</h3>
+        <p>     
+Todas las propiedades y métodos son de acceso público si no se toma ninguna precaución.
+ Un primer enfoque sencillo consiste en la adopción de nombres basado en la convención 
+ de miembros internos de un objeto.
+        </p>
+        <pre>
+            
+        </pre>
+
+        <h3>Privacidad Privada</h3>
+        <p>     
+            Si necesitamos o queremos evitar el acceso a algunas propiedades o métodos 
+            relativos a los detalles de implementación interna, tenemos que establecer 
+            una estrategia.Static
+        </p>
+        <pre>
+            class Cine{
+                static nombre="Andy";
+                constructor(persona){
+                    this.persona=persona;
+                }
+            }
+            
+            
+        </pre>
+
+
+        
+        <h3>Scope Global</h3>
+        <p>     
+            Podemos acceder tanto fuera como dentro 
+            de una función debido a haberla definido fuera 
+            de cualquier función.
+        </p>
+
+        <pre>
+ var a = 10;
+function global() {
+ console.log(a);
+}
+global();
+console.log(a);
+
+        </pre>
+
+
+
+      
+        <h3>Scope Local</h3>
+        <p>     
+            Podemos acceder a ella dentro dicha función, cuando ejecutamos local()
+             te muestra correctamente 2, mientras que si haces console.log(a) 
+             te va a dar error porque a no esta definida, para el scope global 
+             esa variable no existe.
+        </p>
+
+        <pre>
+            function local() {
+                var a = 10;
+                console.log(a);
+               }
+               local();
+               console.log(a);
+        </pre>
+
+
+        <h3>Closure</h3>
+        <p>     
+            Un closure es una función que es libre de variables, esto quiere decir que 
+            las variables de la función padre funcionan, pero el closure no tiene variables
+             propias.
+        </p>
+
+        <pre>
+
+            *function crSuma(x) {
+                return function(y) {
+                  return x + y
+                }
+              }
+              var sumar5 = crSuma(20);
+              var sumar10 = crSuma(30);
+              console.log(sumar20(30));
+              console.log(sumar30(30));*/
+        </pre>
+
+
+        <h3>Meta closure</h3>
+        <p>     
+            Se trata de las envolturas de funciones que podemos crear para aislar 
+            un código fuente y evitar colisiones de variables o espacios de nombres 
+            en general.
+        </p>
+
+        <pre>
+
+            var i = -1;
+            var f = (function(state) { 
+                        return function() {
+                           return state; 
+                        };
+                     })(i); 
+                            
+            i = 1; // 
+            f();
+        </pre>
+
+        <h3>WeakMap</h3>
+        <p>     
+            El objeto WeakMap es una colección de pares clave/valor en la que las 
+            claves son objetos y los valores son valores arbitrarios. Las claves de
+             los WeakMaps solamente pueden ser del tipo Object. Los Primitive data types
+              como claves no están permitidos (ej. un Symbol no pueden ser una clave de WeakMap).
+        </p>
+
+        <pre>
+
+            const SimpleDate = (function() {
+                const _years = new WeakMap();
+                const _months = new WeakMap();
+                const _days = new WeakMap();
+                class SimpleDate {
+                  constructor(year, month, day) {
+                    // Check that (year, month, day) is a valid date
+                    // ...
+              
+                    // If it is, use it to initialize "this" date
+                    _years.set(this, year);
+                    _months.set(this, month);
+                    _days.set(this, day);
+                  }
+                  addDays(nDays) {
+                    // Increase "this" date by n days
+                    // ...
+                  }
+                  getDay() {
+                    return _days.get(this);
+                  }
+                }
+              
+                return SimpleDate;
+        </pre>
+
+
+        <h3>getters y setters</h3>
+        <p>     
+            Una función que obtiene un valor de una propiedad se llama getter y una que 
+            establece el valor de una propiedad se llama setter. Esta característica a 
+            sido implementada en ES2015, pudiendo modificar el funcionamiento normal de 
+            establecer u obtener el valor de una propiedad, a estas se les conoce como 
+            accessor properties.
+
+            En ocasiones queremos valores basados en otros valores, para esto los data 
+            accessors son bastante útiles. Para crearlos usamos los keywords get y set.
+        </p>
+
+        <pre>
+
+            const objeto = {
+                get prop() {
+                  return this.__prop__;
+                },
+                set prop(value) {
+                  this.__prop__ = value * 4;
+                },
+              };
+              
+              objeto.prop = 14;
+              
+              console.log(obj.prop); 
+              //56
+        </pre>
+
+</body>
+<script src="logica.js"></script>
+
+</html>
